@@ -1,0 +1,289 @@
+/* =========================================
+   RESET BÁSICO
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(145deg, #e0f2f7, #f5f8fa);
+  color: #102a43;
+  min-height: 100vh;
+}
+
+/* =========================================
+   LOGIN
+========================================= */
+.login-container {
+  background: #ffffff;
+  padding: 50px 40px;
+  border-radius: 25px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+  width: 380px;
+  max-width: 90%;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  margin: auto;
+  margin-top: 8%;
+  position: relative;
+}
+
+.login-container::before {
+  content: "🔒";
+  font-size: 50px;
+  position: absolute;
+  top: -25px;
+  left: calc(50% - 25px);
+}
+
+.login-container:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.15);
+}
+
+.login-container h2 {
+  margin-bottom: 35px;
+  color: #102a43;
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 14px 45px 14px 15px;
+  margin: 12px 0;
+  border-radius: 12px;
+  border: 1px solid #bcccdc;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 20px 20px;
+}
+
+.login-container input[name="username"] {
+  background-image: url('data:image/svg+xml,%3Csvg fill="%2398d8ef" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Cpath d="M12 12c2.667 0 8 1.334 8 4v2H4v-2c0-2.667 5.333-4 8-4zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/%3E%3C/svg%3E');
+}
+
+.login-container input[name="password"] {
+  background-image: url('data:image/svg+xml,%3Csvg fill="%2398d8ef" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Cpath d="M12 17a2 2 0 0 0 2-2v-3h-4v3a2 2 0 0 0 2 2zm6-7V8a6 6 0 0 0-12 0v2H4v12h16V10h-2zm-8-2a4 4 0 1 1 8 0v2H10V8z"/%3E%3C/svg%3E');
+}
+
+.login-container input:focus {
+  border-color: #3b6d8c;
+  box-shadow: 0 0 12px rgba(59, 109, 140, 0.4);
+  outline: none;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 15px;
+  background: linear-gradient(90deg, #3b6d8c, #1f4b63);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.4s ease;
+}
+
+.login-container button:hover {
+  background: linear-gradient(90deg, #1f4b63, #0f2a3b);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+p.error,
+p.success {
+  margin-bottom: 12px;
+  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+p.error {
+  background: #ffe5e5;
+  color: #d64545;
+}
+p.success {
+  background: #e6f7f1;
+  color: #2a9d8f;
+}
+
+/* =========================================
+   DASHBOARD
+========================================= */
+.dashboard-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 45px 35px;
+  border-radius: 25px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.dashboard-container:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-container h2 {
+  margin-bottom: 25px;
+  font-size: 30px;
+  color: #102a43;
+}
+
+.dashboard-container p {
+  margin-bottom: 30px;
+  font-size: 18px;
+  color: #334e68;
+}
+
+.dashboard-menu a {
+  display: inline-block;
+  margin: 10px;
+  padding: 16px 28px;
+  background: linear-gradient(90deg, #3b6d8c, #1f4b63);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background 0.4s, transform 0.3s, box-shadow 0.4s;
+}
+
+.dashboard-menu a:hover {
+  background: linear-gradient(90deg, #1f4b63, #0f2a3b);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================
+   TABLAS Y LISTAS
+========================================= */
+.table-list {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.table-list th,
+.table-list td {
+  padding: 14px 18px;
+  text-align: left;
+}
+
+.table-list th {
+  background: linear-gradient(90deg, #3b6d8c, #1f4b63);
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.table-list tr:nth-child(even) {
+  background: #f0f4f8;
+}
+
+.table-list tr:hover {
+  background: #e1ebf5;
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+}
+
+/* =========================================
+   FORMULARIOS
+========================================= */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input,
+form select,
+form textarea {
+  width: 82%;
+  max-width: 420px;
+  padding: 15px 18px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: 1px solid #bcccdc;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #3b6d8c;
+  box-shadow: 0 0 15px rgba(59, 109, 140, 0.35);
+  outline: none;
+}
+
+form button {
+  width: 82%;
+  max-width: 420px;
+  padding: 16px;
+  margin-top: 15px;
+  background: linear-gradient(90deg, #3b6d8c, #1f4b63);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.4s ease;
+}
+
+form button:hover {
+  background: linear-gradient(90deg, #1f4b63, #0f2a3b);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================
+   BOTONES GLOBALES
+========================================= */
+a.dashboard-menu {
+  display: inline-block;
+  padding: 12px 25px;
+  margin-top: 15px;
+  background: linear-gradient(90deg, #3b6d8c, #1f4b63);
+  color: #fff;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+a.dashboard-menu:hover {
+  background: linear-gradient(90deg, #1f4b63, #0f2a3b);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================
+   ESTADOS TURNOS
+========================================= */
+.estado-pendiente {
+  color: #f4a261;
+  font-weight: bold;
+}
+.estado-atendido {
+  color: #2a9d8f;
+  font-weight: bold;
+}
+.estado-cancelado {
+  color: #e63946;
+  font-weight: bold;
+}
